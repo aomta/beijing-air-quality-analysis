@@ -148,8 +148,6 @@ Live URL:
 
 * Clustering using K-Means successfully groups air quality conditions into distinct categories representing low, medium, and high pollution levels.
 
-* The interactive dashboard enables users to explore air quality data dynamically across time and stations.
-
 ---
 ## 📸 Dashboard Preview
 
