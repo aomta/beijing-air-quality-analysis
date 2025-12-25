@@ -153,6 +153,9 @@ Live URL:
 ---
 ## 📸 Dashboard Preview
 
+![Dashboard Preview](https://raw.githubusercontent.com/aomta/beijing-air-quality-analysis/main/images/1.png)
+![Dashboard Preview](https://raw.githubusercontent.com/aomta/beijing-air-quality-analysis/main/images/2.png)
+![Dashboard Preview](https://raw.githubusercontent.com/aomta/beijing-air-quality-analysis/main/images/3.png)
 
 
 ---
