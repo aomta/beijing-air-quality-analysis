@@ -65,7 +65,7 @@ def get_aqi_category(aqi):
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv("../data/main_data_clean_final.csv")
+        df = pd.read_csv("main_data_clean_final.csv")
         df['datetime'] = pd.to_datetime(df['datetime'])
         
         cols = ['PM2.5', 'PM10', 'SO2', 'NO2', 'CO', 'O3', 'TEMP', 'PRES', 'DEWP', 'RAIN', 'WSPM']
