@@ -1,4 +1,4 @@
-# Beijing Air Quality Analysis Dashboard
+# ☁️ Beijing Air Quality Analysis Dashboard
 
 ## 📌 Project Description
 This project analyzes air quality conditions in Beijing using the PRSA Air Quality dataset. The analysis focuses on understanding pollution patterns, temporal trends, differences between monitoring stations, relationships with meteorological factors, and clustering air quality conditions using machine learning techniques.
