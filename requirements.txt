@@ -9,3 +9,4 @@ numpy
 jupyter
 ipykernel
 streamlit-folium
+plotly
