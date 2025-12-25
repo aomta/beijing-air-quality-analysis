@@ -402,8 +402,8 @@ with tab_ml:
     
     with col_ml1:
         st.markdown("**Model Settings**")
-        n_clusters = 3 # Fixed as requested
-        sample_size = st.slider("Number of Data Samples:", 500, 5000, 2000, step=500)
+        n_clusters = 3
+        sample_size = st.slider("Number of Data Samples:", 500, 8000, 2000, step=500)
         st.caption(f"Fixed clusters: {n_clusters}")
     
     with col_ml2:
@@ -431,14 +431,20 @@ with tab_ml:
                 means.index[2]: 'Polluted (Stagnant)'
             }
             ml_data['Label'] = ml_data['Cluster'].map(labels_map)
-            
+            cluster_colors = {'Good (High Wind)': '#2ca02c', 'Moderate': '#ff7f0e', 'Polluted (Stagnant)': "#f11f1f"}
+                    
             # Scatter Plot
             fig_ml, ax_ml = plt.subplots(figsize=(10, 6))
-            sns.scatterplot(data=ml_data, x='WSPM', y='PM2.5', hue='Label', palette='bright', s=50, ax=ax_ml)
+            sns.scatterplot(data=ml_data, x='WSPM', y='PM2.5', hue='Label', palette=cluster_colors, s=50, ax=ax_ml)
             ax_ml.set_title("Clustering: Wind vs PM2.5", color='white')
             ax_ml.set_xlabel("Wind Speed (m/s)", color='white')
             ax_ml.set_ylabel("PM2.5", color='white')
-            ax_ml.legend(labelcolor='white', facecolor='black')
+            
+            handles, labels = ax_ml.get_legend_handles_labels()
+            ordered_labels = list(labels_map.values())
+            ordered_handles = [handles[labels.index(label)] for label in ordered_labels]
+            
+            ax_ml.legend(handles=ordered_handles, labels=ordered_labels, labelcolor='white', facecolor='black', edgecolor='white', title="Type of Day Condition")
             ax_ml.tick_params(colors='white')
             st.pyplot(fig_ml)
         else:
